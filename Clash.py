@@ -18,8 +18,7 @@ with open("key.txt") as f:
         response = urllib.request.urlopen(request).read().decode("utf-8")
         data = json.loads(response)
 
-        print(data)
-
         for item in data["items"]:
                 print("\n%s \n[Max Level: %d]" % (item["name"], item["maxLevel"]))
 
+        input("")
